@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The type of font we are using-->
+    <meta charset="UTF-8">
+    <!--Tells the -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cyris">
+    <meta name="description" content="Default HTML Page for SE 111">
+    
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Week 5 | Tables and Forms</title>
+</head>
+<body>
+    <!--Build your Table and Form here-->
+    <h1>Birthday Party Registration Form</h1>
+    <form action="confirm.html" method="GET" style="width: 500px;">
+        <table>
+            <thead>
+                <tr>
+                    <td><label for="label"><b>Labels</b></label></td>
+                    <td><label for="label"><b>Form Fields</b></label></td>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td><label for="g-first">Parent/Guardian Name</label></td>
+                        <td><input type="text" required maxlength="20" name="gfirst" id="g-first" placeholder="First Name"><br>
+                            <input type="text" required maxlength="20" name="glast" id="g-last" placeholder="Last Name"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="c-first">Child's First Name</label></td>
+                        <td><input type="text" required name="cfirst" id="c-first" placeholder="Child's First Name"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="age">Child's Age</label></td>
+                        <td><input type="number" required name="age" id="c-age" value="3"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="date-and-time" style="font-size: 30px;"><b>Date and Time</b></label></td>
+                        <td><br><br><br><br></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="date">Date</label></td>
+                        <td><input type="date" required name="date" id="date"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="time">Start Time</label></td>
+                        <td><input type="time" required name="time" id="s-time"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="guests">Number of Guests</label></td>
+                        <td><input type="number" name="guests" value="5"></td>
+                    </tr>
+
+                    <tr>
+                        <td ><label for="date" style="font-size: 30px;"><b>Food</b></label></td>
+                        <td><br><br><br><br></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="size">Size</label></td>
+                        <td><span>sm:</span>
+                            <input type="radio"  name="size" id="sm" value="sm">
+                            <span>md:</span>
+                            <input type="radio"  name="size" id="md" value="md">
+                            <span>lg:</span>
+                            <input type="radio"  name="size" id="lg" value="lg">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Drinks</label></td>
+                        <td><label for="drink1">Coke</label><input type="checkbox" name="drink1" checked value="coke"><br>
+                        <label for="drink2">Sprite</label><input type="checkbox" name="drink2" value="sprite"><br>
+                        <label for="drink3">Fruit Punch</label><input type="checkbox" name="drink3" value="fruit punch"><br>
+                        <label for="drink4">Lemonade</label><input type="checkbox" name="drink4" value="lemonade"><br>
+                        <label for="drink5">Iced Tea</label><input type="checkbox" name="drink5" value="iced tea"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="cake">Cake</label></td>
+                        <td><select name="cake" id="cake"><option selected>Chocolate</option><option>Vanilla</option><option>I'll bring my own</option></select></td>
+                    </tr>
+
+                    <tr>
+                        <td ><label for="decorations" style="font-size: 30px;"><b>Decorations</b></label></td>
+                        <td><br><br><br><br></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="colors">Color Scheme</label></td>
+                        <td><span>Choose a color scheme for the party</span><br><input type="color" name="colors" id="colors"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="comments">Additional Comments</label></td>
+                        <td><textarea name="comments" id="comments" placeholder="Please add any additional comments here"></textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Submit"></td>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
+    </form>
+</body>
+</html>
