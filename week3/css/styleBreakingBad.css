@@ -101,3 +101,19 @@ li{
     float: left;
     border: 1px solid white;
 }
+/* Cast Div Styling */
+.cast{
+    width: 100%;
+}
+.p-cast{
+    width: 690px;
+    float: left;
+    padding: 40px;
+    color: white;
+}
+.cast, img{
+    float: left;
+}
+.cast > h3{
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
