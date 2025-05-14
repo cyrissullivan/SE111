@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 | More Objects and Arrays</title>
+</head>
+<body>
+    <h1>More Objects and Arrays</h1>
+
+    <script>
+        //Another way to define an array
+        var drinks = new Array();
+
+        //Add entries here
+        drinks[0] = "Coffee";
+        drinks[1] = "Energy Drink";
+        drinks[2] = "Juice";
+        drinks[3] = "Tea";
+        drinks[4] = "Water";
+        drinks[5] = "Soda";
+        drinks[6] = "Lemonade";
+        drinks[7] = "Milk";
+        drinks[8] = "Tequila";
+        drinks[9] = "Whiskey";
+
+        console.log(drinks);
+        console.log(drinks[5]);
+
+        //Push adds items to the array
+        //drinks.push("Beer");
+        //Removes the last element of the array
+        //drinks.pop();
+        //Splice takes out a range of items in an array and reorders them.
+       // drinks.splice(3,1);
+
+        var page = document.querySelector('body');
+
+        for(let i = 0; i<drinks.length; i++){
+            //Output the collection to the page
+            page.innerHTML += `<p>${drinks[i]}</p>`;
+        }
+
+            var drinkTypes = [
+                "Caffeinated beverage",
+                "Soft Drink",
+                "Juice",
+                "Caffeinated beverage",
+                "Water",
+                "Soft Drink",
+                "Soft Drink",
+                "Milk",
+                "Hard Liquor",
+                "Hard Liquor"
+            ];
+        
+        //For loop for Parallel Array
+        for(let i = 0; i<drinks.length; i++){
+            console.log(`Drink: ${drinks[i]}, Drink Type: ${drinkTypes[i]}`);
+        }
+
+        //2 Dimensional Arrays
+        var drinksAndType = [];
+        drinksAndType[0] = drinks;
+        drinksAndType[1] = drinkTypes;
+
+        for(let i = 0; i<drinks.length; i++){
+            console.log(drinksAndType[0][i], drinksAndType[1][i]);
+        }
+
+        //Associative Arrays
+
+        var sportsTeams = [];
+        sportsTeams["baseball"] = "Red Sox";
+        sportsTeams["basketball"] = "Celtics";
+        sportsTeams["football"] = "Patriots";
+        sportsTeams["hockey"] = "Bruins";
+
+        console.log(sportsTeams["hockey"]);
+
+        //JavaScript Object Notation Examples
+
+        var tigerKingCastMember = {
+            name:"Joe Exotic the Tiger King",
+            occupation:"Tiger Handler",
+            residence:"Oklahoma",
+            incarcerated:true,
+            lovesTigers:true,
+            age:62,
+            sayHello:function(){
+                console.log(`Hello from ${this.name}`)
+            }
+        };
+        var tigerKingCastMember2 = {
+            name:"Carole Baskin",
+            occupation:"CEO Big Cat Rescue",
+            residence:"Florida",
+            incarcerated:false,
+            lovesTigers:false,
+            age:63,
+            sayHello:function(){
+                console.log(`Hello from ${this.name}`)
+            }
+        };
+        var tigerKingCastMember3 = {
+            name:"Jeff Lowe",
+            occupation:"Con man",
+            residence:"Oklahoma",
+            incarcerated:true,
+            lovesTigers:true,
+            age:67,
+            sayHello:function(){
+                console.log(`Hello from ${this.name}`)
+            }
+        };
+        var tigerKingCastMember4 = {
+            name:"Don Lewis",
+            occupation:"Tiger Handler",
+            residence:"Florida",
+            incarcerated:false,
+            lovesTigers:true,
+            age:84,
+            sayHello:function(){
+                console.log(`Hello from ${this.name}`)
+            }
+        };
+
+        var characters = [
+            tigerKingCastMember,
+            tigerKingCastMember2,
+            tigerKingCastMember3,
+            tigerKingCastMember4
+        ]
+
+        //example of forEach loop
+        characters.forEach(function(item, character){
+            console.log(item.name, item.occupation, item.incarcerated);
+        });
+
+        //example of for in loop
+        for(let key in characters){
+            console.log(key);
+            page.innerHTML += `<p>${characters[key].name}, Age: ${characters[key].age}, Occupation: ${characters[key].occupation}</p>`;
+            characters[key].sayHello()
+        }
+        
+        </script>
+</body>
+</html>
